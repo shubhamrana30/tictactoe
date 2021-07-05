@@ -1,0 +1,40 @@
+.clr{
+    clear: both;
+}
+
+.main{
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: 1px solid black;
+}
+.board{
+    border:1px solid black;
+
+}
+.first{
+    height: 5em;
+    width: 5em;
+    float: left;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top{
+    border-top: 5px solid black;
+}
+.left{
+    border-left: 5px solid black;
+}
+
+
+.score-board{
+    float: left;
+    box-sizing: border-box;
+    width:50%;
+    text-align: center;
+    border: 1px solid black;
+}

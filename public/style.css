@@ -1,0 +1,9 @@
+.first{
+    float: left;
+    width: 50%;
+    justify-content: center;
+    text-align: center;
+}
+a{
+    width: max-content;
+}

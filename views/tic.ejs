@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <link href="tic.css" rel="stylesheet" type="text/css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.dev.js"></script>
+        <script>const  socket = io.connect('localhost:3000')</script>
+        <script>
+            const room_id = "<%= room_id %>";
+            const first_name = "<%= name %>"
+            let second_name = ""
+            let socket_id = ""
+            console.log(room_id)
+            let score1 = 0
+            let score2 = 0
+            let playAgain = 0 
+        </script>
+        
+        <script> let value = 1</script>
+        <script src="tic.js" defer></script>
+        <script src="tic1.js" defer></script>
+        
+    </head>
+    <body>
+        <div style="display: flex; justify-content: center;align-items: center; margin-top: 9em;">
+            <h2 id="turn" >waiting for player to join</h2> 
+        </div>
+        <div style="display: flex; justify-content: center;align-items: center;">
+            <button id="but" style="display: none;">click me</button> 
+        </div>
+        
+        <div class="main">
+            <div class="board">
+                <div>
+                    <div  class="first" id="1" >
+                        <h1 class="values"></h1>
+                    </div>
+                    <div class="first left" id="2" >
+                        <h1 class="values"></h1>
+                    </div>
+                    <div class="first left" id="3">
+                        <h1 class="values"></h1>
+                    </div>
+                </div>
+                <div class="clr"></div>
+                <div>
+                    <div class="first top" id="4">
+                        <h1 class="values"></h1>
+                    </div>
+                    <div class="first left top" id="5" >
+                        <h1 class="values"></h1>
+                    </div>
+                    <div class="first left top" id="6" >
+                        <h1 class="values"></h1>
+                    </div>
+                </div>
+                <div class="clr"></div>
+                <div>
+                    <div class="first top" id="7" >
+                        <h1 class="values"></h1>
+                    </div>
+                    <div class="first left top" id="8">
+                        <h1 class="values"></h1>
+                    </div>
+                    <div class="first left top" id="9">
+                        <h1 class="values"></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="main-score-board" style="margin-top:5em;display: none">
+            <div class="score-board">
+                <h1>PLAYER 1   </h1>
+                <h2 id = "1box"></h2>
+            </div>
+            <div class="score-board">
+                <h1>PLAYER 2   </h1>
+                <h2 id = "2box"></h2>
+            </div>
+        </div>
+        <script>
+            console.log(score1)
+            document.getElementById("1box").innerHTML = score1
+            document.getElementById("2box").innerHTML = score2
+            console.log(score1)
+        </script>
+    
+    </body>
+</html>
