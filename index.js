@@ -159,15 +159,10 @@ app.use(bodyparser.urlencoded({extended: true}))
 app.use(express.json())
 
 app.get('/',function(req,res){
-    res.render('mainpage.ejs')
-})
-
-app.get('/tictactoe',function(req,res){
     res.render('home.ejs')
 })
-app.get('/sudoku',function(req,res){
-    res.render('sudoku.ejs')
-})
+
+
 
 app.post('/newgame',(req,res)=>{
     res.render('tic.ejs',{
