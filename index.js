@@ -7,7 +7,7 @@ const fs = require('fs')
 const { json } = require('body-parser')
 const app = express()
 
-const server = app.listen(3000,()=>{
+const server = app.listen(process.enc.PORT || 3000,()=>{
     console.log("listening to localhost:3000")
 })
 
